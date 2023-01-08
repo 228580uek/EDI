@@ -1,0 +1,27 @@
+Link: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+
+BASIC FETCH:
+
+fetch('https://mockaroo.com/c0263c70')
+  .then((response) => response.json())
+  .then((data) => console.log(data));
+
+UPLOADING JSON DATA:
+
+const data = { username: 'example' };
+
+fetch('https://example.com/profile', {
+  method: 'POST', 
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(data),
+})
+  .then((response) => response.json())
+  .then((data) => {
+    console.log('Success:', data);
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+

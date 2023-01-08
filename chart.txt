@@ -1,0 +1,52 @@
+Link: https://www.chartjs.org/docs/latest/getting-started/
+
+CHART_01
+
+<div>
+  <canvas id="Chart_01"></canvas>
+</div>
+
+<script src="..."></script>
+
+<script>
+  const ctx = document.getElementById('Chart_01');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['country / Państwo'],
+      datasets: [{
+        label: 'Population / Liczba ludności w różnych krajach',
+        data: [...],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+
+CHART_02
+
+const config = {
+  type: 'line',
+  data: data,
+};
+
+const labels = 'Country/Państwo';
+const data = {
+  labels: labels,
+  datasets: [{
+    label: 'Birth rate / Liczba urodzeń',
+    data: [........],
+    fill: false,
+    borderColor: 'rgb(75, 192, 192)',
+    tension: 0.1
+  }]
+};
+
